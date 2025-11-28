@@ -42,5 +42,20 @@
                         this.Idade = idade;
                     }```
 
+        * Métodos abstratos:
+
+
 # Encapsulamento:
-    * 
+* Ocultar partes independentes da implementação, permitindo construir partes invisíveis ao mundo exterior. 
+* O encapsulamento ele agrupa os dados (atributos) e métodos que operam sobre esses dados dentro de uma única classe, **restringindo** o acesso direto a esses atributos.
+* Ao manter os atributos privados, você obriga o uso de getters e setters.
+* Um bom objeto encapsulado irá possuir uma interface. 
+* Encapsular **não é obrigatório**, mas é uma boa prática para produzir Classes mais eficientes. 
+* Vantagens do encapsulamento: 
+    * **Segurança:** Protege os dados internos da classe contra manipulação indevida ou acidental por outras partes do código, garantido a consistencia dos dados. 
+    * **Flexibilidade:** Permite que os detalhes da implementação de uma classe sejam alterados sem afetar outras classes que a utilizam, **desde que os getters e setters permaneçam os mesmos**.
+    * **Manutenção e organização:** Torna o código mais limpo e fácil de entender, pois os detalhes das implementações se encontram dentro da classe e a interação com a classe é feita por meio dos *getters e setters*. 
+    * **Reutilização do código:** A abordagem modular e bem definida facilita a reutilização de classes em diferentes partes de uma aplicação. 
+
+## Interface: 
+* É uma lista de serviços fornecidos por um  componente. É o contato com o mundo exteriro, que define o que pode ser feito com um objeto dessa classe. 
