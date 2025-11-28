@@ -27,6 +27,20 @@
         * **Construtor padrão:** É quando nenhum construtor foi declarado na classe. Dessa forma, o Java fornece um construtor padrão sem nenhum parâmentro automaticamente. Dessa forma, ele **não inicializa** os atributos com valores específicos, mas garante a **criação de um objeto básico**.
         * **Construtor com parâmetro:** É um construtor que criamos para inicializar os atributos com valores específicos no momento em que estão sendo instanciados. Quando criamos um construtor com parâmetros, automaticamente **removemos o construtor padrão**. 
         * **Sobrecarga de construtores:** Uma classe p**ode ter vários construtores**, desde que tenham diferentes números ou diferentes parâmetros. Permite criar objetos de diferentes maneiras. 
-        
+    * Getters e Setters:
+        * São sempre métodos públicos, utilizados para acessar e modificar atributos privados, protegendo os dados através do encapsulamento. 
+            * **Métodos getter:** É o método de acesso, retorna o valor do atributo e por isso ele é declarado da seguinte forma:
+            ```java
+            public TipoRetorno getNomeAtributo() {
+                // return atributo;
+            }
+            ```
+            * **Método setter:**É o método de alteração, modificação, podendo definir ou atualizar o valor. 
+                * Normalmente recebe um valor como parâmetro e o define para um atributo. Exemplo:
+                ```java
+                    public void setIdade(int idade){
+                        this.Idade = idade;
+                    }```
+
 # Encapsulamento:
     * 
