@@ -59,3 +59,57 @@
 
 ## Interface: 
 * É uma lista de serviços fornecidos por um  componente. É o contato com o mundo exteriro, que define o que pode ser feito com um objeto dessa classe. 
+
+# Herança:
+* A herança permite então que uma nova classe seja baseada na definição de outra classe previamente existente. 
+* A herança será aplicada tanto para as características quanto para os comportamentos, ou seja, tanto para os atributos quanto para os métodos.
+* Uma classe "mãe" é também chamada de **superclasse** ou **progenitora**.
+* Já classes filhas, podem ser chamadas de **subclasse**. 
+* Para dizer que uma classe filha está herdando características e métodos de uma classe mãe, utilizamos a palavra ***extends*** logo após a definição da classe. Exemplo:
+```java
+public class Pessoa(){ //Classe mãe
+    private String name;
+    private int age;
+    private char sex;
+}
+
+public class Aluno extends Pessoa(){
+    //Bloco de código
+}
+```
+* Caso tenha sido definido um **construtor** na classe mãe, ele será exigido na classe filha, é possível personalizar com os atributos exclusivos da classe filha. Para isso, definimos o construtor com o cabeçalho definido na classe mãe e os atributos exclusivos da filha e dentro dele, a primeir linha deverá ser **super(atributos classe mãe)**. Exemplo:
+```java
+public class Pessoa(){ //Classe mãe
+    private String name;
+    private int age;
+    private char sex;
+    
+    public Pessoa(String name, int age, char sex){
+        this.name = name;
+        this.age = age; 
+        this.sex = sex;
+    }
+}
+
+public class Aluno extends Pessoa(){
+    private String curso;
+    private int matricula;
+
+    public Aluno(String name, int age, char sex, String curso, int matricula){ // Cabeçalho igual ao da classe mãe junto com os atributos exclusivos da filha.
+
+    super(name, age, sex);
+    this.curso = curso;
+    this.matricula = matricula;
+    }
+}
+```
+* Nesse caso do uso de construtores, é possível gerar outros construtores normalmente utilizando o ***this*** como é feito normalmente. 
+* Uma subclasse também pode ser uma superclasse, vai depender do ponto de vista. 
+* Toda subclasse vai herdar **todos** os conteúdos das ancestrais. 
+* Uma classe que não é subclasse de nenhuma outra, ou seja, que não tem mãe, essa classe passa a ser considerada como **raiz da árvore hierárquica**. 
+* Subclasse que não tem filha, é chamada de **folha**.
+* **Ancestral** é como nos referimos ao "antecessor" de uma classe, sem contar sua mãe, é como se o ancestral fosse os "avós".
+* **Descendente** é como nos referimos ao "sucessor" da classe filha, exemplo, a classe Aluno vista acima, é descente da classe Pessoa. 
+
+    ## Tipos de Herança:
+    * 
