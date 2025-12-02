@@ -35,12 +35,14 @@
                 // return atributo;
             }
             ```
-            * **Método setter:**É o método de alteração, modificação, podendo definir ou atualizar o valor. 
+            * **Método setter:** É o método de alteração, modificação, podendo definir ou atualizar o valor. 
                 * Normalmente recebe um valor como parâmetro e o define para um atributo. Exemplo:
+                
                 ```java
                     public void setIdade(int idade){
                         this.Idade = idade;
-                    }```
+                    }
+                    ```
 
         * Métodos abstratos:
 
@@ -50,7 +52,7 @@
 * O encapsulamento ele agrupa os dados (atributos) e métodos que operam sobre esses dados dentro de uma única classe, **restringindo** o acesso direto a esses atributos.
 * Ao manter os atributos privados, você obriga o uso de getters e setters.
 * Um bom objeto encapsulado irá possuir uma interface. 
-* Encapsular **não é obrigatório**, mas é uma boa prática para produzir Classes mais eficientes. 
+* Encapsular **não é obrigatório**, mas é uma boa prática para produzir **classes** mais eficientes. 
 * Vantagens do encapsulamento: 
     * **Segurança:** Protege os dados internos da classe contra manipulação indevida ou acidental por outras partes do código, garantido a consistencia dos dados. 
     * **Flexibilidade:** Permite que os detalhes da implementação de uma classe sejam alterados sem afetar outras classes que a utilizam, **desde que os getters e setters permaneçam os mesmos**.
@@ -58,7 +60,7 @@
     * **Reutilização do código:** A abordagem modular e bem definida facilita a reutilização de classes em diferentes partes de uma aplicação. 
 
 ## Interface: 
-* É uma lista de serviços fornecidos por um  componente. É o contato com o mundo exteriro, que define o que pode ser feito com um objeto dessa classe. 
+* É uma lista de serviços fornecidos por um  componente. É o contato com o mundo exterior, que define o que pode ser feito com um objeto dessa classe. 
 
 # Herança:
 * A herança permite então que uma nova classe seja baseada na definição de outra classe previamente existente. 
@@ -112,4 +114,14 @@ public class Aluno extends Pessoa(){
 * **Descendente** é como nos referimos ao "sucessor" da classe filha, exemplo, a classe Aluno vista acima, é descente da classe Pessoa. 
 
     ## Tipos de Herança:
-    * 
+    * **Herança de implementação:** É responsável por implementar uma classe abstrata, podendo também adicionar atributos e métodos próprios.
+    * **Herança pobre:** Um tipo de herança onde uma classe filha herda **todos** os atributos e métodos da classe pai, mas **não adiciona nenhuma funcionalidade própria**. 
+    * **Herança para diferença:** É a herança em que uma subclasse herda tudo de uma classe já existente e, além disso, **adiciona novos atributos e métodos ou modifica o comportamento dos métodos herdados**. 
+
+* **Classe Abstrata**: Não pode ser instanciada, só pode servir como progenitora. Ou seja, ela não poderá gerar objetos.
+
+* **Método Abstrato:** É um método declarado, mas não implementado na progenitora. Só pode ser colocado em uma interface ou em uma classe abstrata.
+
+* **Classe Final:** Não pode ser herdada por outra classe. É obrigatoriamente **folha**, ou seja, ela não pode ter filho.
+
+* **Método final:** É um método que não pode ser sobrescrito pelas suas sub-classes. Precisa ser obrigatoriamente herdado. 
