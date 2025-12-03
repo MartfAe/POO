@@ -4,19 +4,76 @@
     * Exemplo: nome e idade são **atributos**; já acelerar e apresentarProduto são **métodos**.
 * Classes possuem um modificador de acesso e um nome.   
 * Declarando uma classe:
-    * **public class Dog{}**
+    ```java
+    public class Dog{
+        //Atributos (caractéristicas)
+        int size;
+        String name;
+        String breed;
+        boolean sit;
+
+        //Métodos (o que ele faz);
+        public void bark(){
+            System.out.println("Au AU")!
+    }
+        public void sitNow(){
+            this.sit = true;
+
+        }
+
+    }
+    ```
 * Além de métodos e atributos, uma classe pode conter um construtor, que é um método especial que possui o **mesmo nome da classe** que busca **inicializar** um objeto. 
 * Basicamente uma classe define os atributos e métodos comuns que serão compartilhados com um objeto. 
 * Uma classe pode não ser um objeto. 
 
 # Objeto:
 * Um objerto é criado a partir de uma classe, ou seja, um objeto é uma instância de uma classe. 
-* Todo objeto variáveis de instância, é o seu estado, o que conhece sobre si mesmo,  e métodos, o que o objeto pode fazer.
+* Todo objeto contém variáveis de instância, é o seu estado, o que conhece sobre si mesmo,  e métodos, o que o objeto pode fazer.
 * Cada objeto é único. 
-* Todo objeto vai conter: atributos, métodos e estado
+* Todo objeto vai conter: atributos, métodos e estado.
+```java
+    public class DogTest{
+        public static void main(String [] args){
+            Dog p1 = new Dog();
+            p1.name = "Scooby";
+            p1.size = 30;
+            p1.bark();
+
+        }
+    }
+```
 
 # Variáveis
+* São contêineres para armazenar dados na memória do computador. 
+* Antes de serem utilizadas é necessário declará-la com um tipo de dado específico. 
+* Podem ser do tipo:
+    * **Int:** são variáveis do tipo inteiro, ou seja, só recebem dados do tipo inteiro. 
+    * **Char:** Variáveis que recebem apenas um caractere. 
+    * **Float:** Recebem dados numéricos do tipo **Real**, ou seja, aceitam números com casas decimais e sua precisão é menor que o double. 
+    * **Double:** Basicamente a mesma coisa que o ***float***, a diferença está na precisão. 
+    * **String:** São variáveis que armazem texto, ao contrário do tipo ***char***, esse tipo de dado armazena mais de um caractere. 
+    * **Boolean:** Variáveis do tipo lógica, retornam *true* ou *false*.
+    * **OBSERVAÇÃO: Quando estamos utilizando números reais, lembrar que em vez da vírgula que normalmente utilizamos, devemos utilizar um ponto.**
+    ```java
+    public class DeclarandoVariável{
+        int v1 = 5;
+        char sexo = 'F';
+        float media = 2.5f;
+        double media2 = 25.68; 
+        String nome = "Jubileu";
+        Boolean isWorking = true;
+    }
+    ```
+* Além de se ter que declarar a variável com um determinado tipo, existem algumas regras de nomenclatura. São elas:
+    * Pode conter letras, números, sublinhados e cifrões, **após o primeiro caractere que deve ser uma letra**.
+    * Java diferencia maiúsculas e minúsculas(ex: nome é diferente de Nome).
+    * **Não é permitido** usar palavras reservadas do java, como *class* ou *int*, como nome de variável. 
 
+* Existem também algumas convenções de nomenclatura: 
+    * **Camel Case:** Para nomes compostos, a primeira palavra começa com minúscla e as demais começam com maiúscula (ex: **m**inha**I**dade).
+    * **Constantes:** São declaradas com a palavra chave *final* e *static*. O nome deve ser todo em maiúsculas. 
+    
 # Métodos:
 * **Métodos construtores:**
     * É um método especial utilizado na inicialização de objetos de uma classe no momento de sua criação; 
@@ -115,7 +172,7 @@ public class Aluno extends Pessoa(){
 
     ## Tipos de Herança:
     * **Herança de implementação:** É responsável por implementar uma classe abstrata, podendo também adicionar atributos e métodos próprios.
-    * **Herança pobre:** Um tipo de herança onde uma classe filha herda **todos** os atributos e métodos da classe pai, mas **não adiciona nenhuma funcionalidade própria**. 
+        * **Herança pobre:** Um tipo de herança onde uma classe filha herda **todos** os atributos e métodos da classe pai, mas **não adiciona nenhuma funcionalidade própria**. 
     * **Herança para diferença:** É a herança em que uma subclasse herda tudo de uma classe já existente e, além disso, **adiciona novos atributos e métodos ou modifica o comportamento dos métodos herdados**. 
 
 * **Classe Abstrata**: Não pode ser instanciada, só pode servir como progenitora. Ou seja, ela não poderá gerar objetos.
@@ -125,3 +182,12 @@ public class Aluno extends Pessoa(){
 * **Classe Final:** Não pode ser herdada por outra classe. É obrigatoriamente **folha**, ou seja, ela não pode ter filho.
 
 * **Método final:** É um método que não pode ser sobrescrito pelas suas sub-classes. Precisa ser obrigatoriamente herdado. 
+    * Para definir que um método é **final**, colocamos após o modificador de visibilidade a palavra ***final***.
+    ```java
+    public final void pagarMensalidade(){
+    }
+    ```
+
+# @Override:
+* Nos permite reescrever um método, ou seja, podemos reescrever nas classes filhas métodos criados inicialmente na classe pai. 
+* Métodos que serão sobrepostos (reescritos), devem possuir o mesmo nome, tipo de retorno e quantidade de parâmetros do método inicial. Porém, será implementado com especificações da classe atual, podendo adicionar um algo a mais ou não.
