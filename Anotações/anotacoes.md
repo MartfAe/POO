@@ -83,7 +83,7 @@
     * Existem alguns tipos de construtores, são eles: 
         * **Construtor padrão:** É quando nenhum construtor foi declarado na classe. Dessa forma, o Java fornece um construtor padrão sem nenhum parâmentro automaticamente. Dessa forma, ele **não inicializa** os atributos com valores específicos, mas garante a **criação de um objeto básico**.
         * **Construtor com parâmetro:** É um construtor que criamos para inicializar os atributos com valores específicos no momento em que estão sendo instanciados. Quando criamos um construtor com parâmetros, automaticamente **removemos o construtor padrão**. 
-        * **Sobrecarga de construtores:** Uma classe p**ode ter vários construtores**, desde que tenham diferentes números ou diferentes parâmetros. Permite criar objetos de diferentes maneiras. 
+        * **Sobrecarga de construtores:** Uma classe **pode ter vários construtores**, desde que tenham diferentes números ou diferentes parâmetros. Permite criar objetos de diferentes maneiras. 
     * Getters e Setters:
         * São sempre métodos públicos, utilizados para acessar e modificar atributos privados, protegendo os dados através do encapsulamento. 
             * **Métodos getter:** É o método de acesso, retorna o valor do atributo e por isso ele é declarado da seguinte forma:
@@ -162,7 +162,8 @@ public class Aluno extends Pessoa(){
     }
 }
 ```
-* Nesse caso do uso de construtores, é possível gerar outros construtores normalmente utilizando o ***this*** como é feito normalmente. 
+* Nesse caso do uso de construtores, é possível gerar outros construtores normalmente utilizando o ***this*** como é feito.
+* Quando queremos invocar um construtor da classe mãe que não seja o padrão, ou seja, o construtor vazio, utilizamos a palavra ***super*** na primeira linha dentro do construtor da classe filha. 
 * Uma subclasse também pode ser uma superclasse, vai depender do ponto de vista. 
 * Toda subclasse vai herdar **todos** os conteúdos das ancestrais. 
 * Uma classe que não é subclasse de nenhuma outra, ou seja, que não tem mãe, essa classe passa a ser considerada como **raiz da árvore hierárquica**. 
@@ -182,6 +183,7 @@ public class Aluno extends Pessoa(){
 * **Classe Final:** Não pode ser herdada por outra classe. É obrigatoriamente **folha**, ou seja, ela não pode ter filho.
 
 * **Método final:** É um método que não pode ser sobrescrito pelas suas sub-classes. Precisa ser obrigatoriamente herdado. 
+* Ou seja, é um método que não pode ter a palavra **@Override** antes da sua declaração.
     * Para definir que um método é **final**, colocamos após o modificador de visibilidade a palavra ***final***.
     ```java
     public final void pagarMensalidade(){
@@ -191,3 +193,21 @@ public class Aluno extends Pessoa(){
 # @Override:
 * Nos permite reescrever um método, ou seja, podemos reescrever nas classes filhas métodos criados inicialmente na classe pai. 
 * Métodos que serão sobrepostos (reescritos), devem possuir o mesmo nome, tipo de retorno e quantidade de parâmetros do método inicial. Porém, será implementado com especificações da classe atual, podendo adicionar um algo a mais ou não.
+
+# Polimorfismo:
+* O significado da palavra é *muitas formas*, ou seja, quer dizer que um mesmo método possui comportamentos diferentes.
+* Permite que um mesmo nome represente vários comportamentos diferentes.  
+    **Assinatura do método**
+    * Consiste na quantidade e tipos dos **parâmetros**. 
+    * Exemplo:
+    ```java
+    public float calcMedia(float n1, float n2){} 
+
+    public int calcMedia(float v1, float v2){} // Esse método é igual ao primeiro, mesma quantidade de parâmetros e tipo. 
+    
+    public float calcMedia(int bim, float n1, float n2){}// Esse método não é igual aos anteriores pois tem um parâmetro a mais e de tipo diferente. 
+    ```
+    ### Tipos de Polimorfismo:
+    * **Sobreposição:**  
+
+    * **Sobrecarga:**
