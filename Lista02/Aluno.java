@@ -22,7 +22,7 @@ public class Aluno {
         this(matricula, nome, 0);
     }
 
-    private void validarMatricula(string matricula){
+    private void validarMatricula(String matricula){
         if(matricula == null || matricula.trim().isEmpty()){
             System.out.println("Matrícula inválida");
         }

@@ -208,6 +208,8 @@ public class Aluno extends Pessoa(){
     public float calcMedia(int bim, float n1, float n2){}// Esse método não é igual aos anteriores pois tem um parâmetro a mais e de tipo diferente. 
     ```
     ### Tipos de Polimorfismo:
-    * **Sobreposição:**  
+    * **Sobreposição:** Acontece quando **substituímos** um método de uma superclasse na sua subclasse, usando a **mesma assinatura.** Utilizamos a anotação **@Override** antes do método para indicar a sobreescrita.  
+        * É necessário que os métodos tenham a mesma assinatura e estejam em classes diferentes. 
 
-    * **Sobrecarga:**
+
+    * **Sobrecarga:** Ocorre quando temos assinaturas diferentes em uma mesma classe. 
