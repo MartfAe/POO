@@ -1,5 +1,9 @@
-package model.enums;
+package app.model.enums;
 
-public enum vehicle {
+public enum VehicleStatus {
+    AVAILABLE,
+    RENTED
 
 }
+
+

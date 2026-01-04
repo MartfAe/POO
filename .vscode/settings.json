@@ -1,3 +1,6 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "java.debug.settings.onBuildFailureProceed": true,
+    "editor.suggest.matchOnWordStartOnly": false,
+    "typescript.tsserver.web.projectWideIntellisense.enabled": false
 }

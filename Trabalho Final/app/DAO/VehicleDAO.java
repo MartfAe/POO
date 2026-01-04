@@ -1,9 +1,8 @@
-package DAO;
+package app.DAO;
+import java.util.ArrayList;
 import java.util.List;
 
-import model.Vehicle;
-
-import java.util.ArrayList;
+import app.model.Vehicle;
 
 public class VehicleDAO {
 
