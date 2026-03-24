@@ -43,6 +43,8 @@
         }
     }
 ```
+* Normalmente definimos a visibilidade dos objetos no momento em que os declaramos. É a visibilidade que será responsável por quem pode acessar e modifica-los. 
+
 
 # Variáveis
 * São contêineres para armazenar dados na memória do computador. 
@@ -103,6 +105,14 @@
 
         * Métodos abstratos:
 
+# Visibilidade: 
+* Responsável por restringir o acesso a objetos e métodos, protegendo os dados. 
+* Existem 4 tipos de classificação de visibilidade, sendo elas: 
+    * **Public:** Permite que todas as classes tenham acesso e possam modificar os objetos e utilizar os métodos. 
+    * **Private:** Apenas a classe atual pode acessar e modificar os objetos existentes. 
+    * **Protected:** Apenas a classe atual e suas subclasses poderam acessar e modificar os objetos e métodos presentes. 
+    * **Default:** É quando nenhum outro modificador de acesso foi definido e permite que apenas as classes do mesmo pacote possam acessar. 
+* Para realizar modificações ou acessos nos atributos de um objeto, que sejam private ou protected, usaremos métodos acessores e métodos modificadores. 
 
 # Encapsulamento:
 * Ocultar partes independentes da implementação, permitindo construir partes invisíveis ao mundo exterior. 
