@@ -105,6 +105,9 @@
 
         * Métodos abstratos:
 
+# Pacotes (packages):
+* Define um agrupamento de classes e torna-se parte do nome destas classes. 
+
 # Visibilidade: 
 * Responsável por restringir o acesso a objetos e métodos, protegendo os dados. 
 * Existem 4 tipos de classificação de visibilidade, sendo elas: 
