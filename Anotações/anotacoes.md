@@ -26,6 +26,7 @@
 * Além de métodos e atributos, uma classe pode conter um construtor, que é um método especial que possui o **mesmo nome da classe** que busca **inicializar** um objeto. 
 * Basicamente uma classe define os atributos e métodos comuns que serão compartilhados com um objeto. 
 * Uma classe pode não ser um objeto. 
+* **Atributos Estáticos(*static*):** Eles pertencem a classe, não a objetos individuais. Dessa forma, compartilham uma única cópia na memória entre todos os objetos da classe. Muito utilizados para contadores, constantes ou dados globais e são acessados por : ***NomeDaClasse.atributo***. 
 
 # Objeto:
 * Um objerto é criado a partir de uma classe, ou seja, um objeto é uma instância de uma classe. 
@@ -86,7 +87,7 @@
         * **Construtor padrão:** É quando nenhum construtor foi declarado na classe. Dessa forma, o Java fornece um construtor padrão sem nenhum parâmentro automaticamente. Dessa forma, ele **não inicializa** os atributos com valores específicos, mas garante a **criação de um objeto básico**.
         * **Construtor com parâmetro:** É um construtor que criamos para inicializar os atributos com valores específicos no momento em que estão sendo instanciados. Quando criamos um construtor com parâmetros, automaticamente **removemos o construtor padrão**. 
         * **Sobrecarga de construtores:** Uma classe **pode ter vários construtores**, desde que tenham diferentes números ou diferentes parâmetros. Permite criar objetos de diferentes maneiras. 
-    * Getters e Setters:
+    * **Getters e Setters:**
         * São sempre métodos públicos, utilizados para acessar e modificar atributos privados, protegendo os dados através do encapsulamento. 
             * **Métodos getter:** É o método de acesso, retorna o valor do atributo e por isso ele é declarado da seguinte forma:
             ```java
@@ -104,9 +105,18 @@
                     ```
 
         * Métodos abstratos:
+        ## **Métodos Estáticos:** 
+        * É um método que **pertence** a classe e não a um objeto específico, podendo ser chamado diretamente pelo nome da classe, sem criar um objeto. 
+        * Não pode manipular atributos não estáticos.
+        * Só podem invocar métodos estáticos, que se encontram na mesma classe. 
+        * Acabam sendo ideais para métodos que não dependem do estado de um objeto, como o da classe *Math*. 
+
+        ## **Métodos Não Estáticos:**
+        * Podem invocar qualquer tipo de método (estático ou não estático).
 
 # Pacotes (packages):
 * Define um agrupamento de classes e torna-se parte do nome destas classes. 
+
 
 # Visibilidade: 
 * Responsável por restringir o acesso a objetos e métodos, protegendo os dados. 
