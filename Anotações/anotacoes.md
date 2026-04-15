@@ -142,6 +142,15 @@
 ## Interface: 
 * É uma lista de serviços fornecidos por um  componente. É o contato com o mundo exterior, que define o que pode ser feito com um objeto dessa classe. 
 
+# Relacionamentos entre classes/objetos:
+## Agregação: 
+* O ciclo de vida do obketo agregado não depende do ciclo de vida do objeto agregador. 
+* O objeto agregado pode ser utilizado por vários objetos agregadores. 
+
+## Composição: 
+* O ciclo de vida do objeto contido depende do ciclo de vida do objeto que contém. 
+* O objeto contido é de uso exclusivo do objeto que contém. 
+
 # Herança:
 * A herança permite então que uma nova classe seja baseada na definição de outra classe previamente existente. 
 * A herança será aplicada tanto para as características quanto para os comportamentos, ou seja, tanto para os atributos quanto para os métodos.
