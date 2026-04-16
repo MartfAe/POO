@@ -1,5 +1,6 @@
 public class VeiculoFrota {
 
+    private static final double LIMITE_MANUTENCAO = 10000.0;
     private String placa;
     private String modelo;
     private int capacidadeCarga;
@@ -67,8 +68,43 @@ public class VeiculoFrota {
 
     }
 
+    public String getPlaca(){
+        return placa;
+    }
+
+    public String getModelo(){
+        return modelo;
+    }
+
     public void setCargaCarregada(int quantidadeCarga){
         this.cargaCarregada = quantidadeCarga;
     }
 
-}
+
+    public boolean validarKm(double qtdKm){
+
+    }
+    public void registrarViagem(double km){
+        if(km>0){
+            this.quilometragem += km;
+            System.out.println("Viagem registrada! Nova quilometragem: "+ this.quilometragem);
+            if(precisaManutencao()){
+                System.out.println("Este veiculo atingiu " +this.quilometragem+"Km.\nPrecisa de manutenção");
+            }
+        }else{
+            System.out.println("ERRO: Quilometragem inválida");
+        }
+
+    }
+
+    public void registrarViagem(double km, String destino){
+        registrarViagem(km);
+
+        if(km>0){
+            System.ou.println("Destino da viagem: "+ destino);
+        }
+    }
+
+    public boolean precisaManutencao(){
+        return this.quilometragem > LIMITE_MANUTENCAO;
+    }
