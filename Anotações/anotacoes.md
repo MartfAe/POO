@@ -14,7 +14,7 @@
 
         //Métodos (o que ele faz);
         public void bark(){
-            System.out.println("Au AU")!
+            System.out.println("Au AU");
     }
         public void sitNow(){
             this.sit = true;
@@ -46,33 +46,63 @@
 ```
 * Normalmente definimos a visibilidade dos objetos no momento em que os declaramos. É a visibilidade que será responsável por quem pode acessar e modifica-los. 
 
+# Atributos:
+## O que é:
+* Variáveis associadas a uma classe ou objetp que armazenam suas características, estados ou dados. 
+* Podem ser classificados de diferentes maneiras: 
+    * **Quanto ao Escopo(onde pertecem):** 
+        * **Atributos de Instância(ou objeto):** 
+            * Pertencem a um objeto específico da classe. Cada objeto criado tem sua própria cópia e seus próprios valores para esse atributo. Exemplo: 
+            ```java
+            public class ExemploInstanceAtribute(){
+                public static void main (String[] args){
+                    Carro carro1 = new Carro();
+                    carro1.cor = "azul";
+                    carro2.cor = "vermelho";
+                }}
+            ```
+        * **Atributos de Classe (ou Static):** 
+            * Pertencem à classe em si, e não a um objeto específico. Ou seja, todos os objetos daquela classe compartilham o mesmo valor e o mesmo local da memória. 
+            * Caso o valor do atributo *Static* seja alterado em algum momento, todos os objetos que utilizam o mesmo também serão alterados. 
+            * Exemplo: 
+            ```java
+            public class ExemploStaticAtribute(){
+                public static void main(String[] args){
+                    Carro.rodas = 4;
+                    //Todos os carros terão 4 rodas, se mudar para 3, todos serão alterados.
 
-# Variáveis
-* São contêineres para armazenar dados na memória do computador. 
-* Antes de serem utilizadas é necessário declará-la com um tipo de dado específico. 
-* Podem ser do tipo:
-    * **Int:** são variáveis do tipo inteiro, ou seja, só recebem dados do tipo inteiro. 
+                }
+            }
+            ```
+    * **Quanto à visibilidade(Encapsulamento):**
+        * Os modificadores de acesso definem quem pode ver ou alterar o atributo: 
+            * **Public:** O atributo pode ser acessado de qualquer lugar, tanto dentro quanto fora da classe. 
+            * **Private:** O atributo só pode acessado ou modificado por métodos dentro da própria classe. É fundamental para o encapsulamento de dados. 
+            * **Protected:** O atributo pode ser acessado pela própria classe e por suas subclasses(herança).
+* Podem ser de diferentes tipos: 
+ * **Int:** são variáveis do tipo inteiro, ou seja, só recebem dados do tipo inteiro. 
     * **Char:** Variáveis que recebem apenas um caractere. 
     * **Float:** Recebem dados numéricos do tipo **Real**, ou seja, aceitam números com casas decimais e sua precisão é menor que o double. 
     * **Double:** Basicamente a mesma coisa que o ***float***, a diferença está na precisão. 
     * **String:** São variáveis que armazem texto, ao contrário do tipo ***char***, esse tipo de dado armazena mais de um caractere. 
     * **Boolean:** Variáveis do tipo lógica, retornam *true* ou *false*.
     * **OBSERVAÇÃO: Quando estamos utilizando números reais, lembrar que em vez da vírgula que normalmente utilizamos, devemos utilizar um ponto.**
-    ```java
-    public class DeclarandoVariável{
-        int v1 = 5;
-        char sexo = 'F';
-        float media = 2.5f;
-        double media2 = 25.68; 
-        String nome = "Jubileu";
-        Boolean isWorking = true;
-    }
-    ```
-* Além de se ter que declarar a variável com um determinado tipo, existem algumas regras de nomenclatura. São elas:
+    * **OBSERVAÇÃO:** Em java ao utilizar variável do tipo ***Float***, é necessário adicionar um *f* após o número. Exemplo: *(1.60f)* . Caso não seja adicionado, terá erro pois irá ser lido como double. 
+    * Exemplo:
+        ```java
+        public class DeclarandoVariável{
+            int v1 = 5;
+            char sexo = 'F';
+            float media = 2.5f;
+            double media2 = 25.68; 
+            String nome = "Jubileu";
+            Boolean isWorking = true;
+        }
+        ```
+* Antes de ser utilizado, é necessário delcarar e definir um determinado tipo, existem algumas regras de nomenclatura. São elas:
     * Pode conter letras, números, sublinhados e cifrões, **após o primeiro caractere que deve ser uma letra**.
     * Java diferencia maiúsculas e minúsculas(ex: nome é diferente de Nome).
     * **Não é permitido** usar palavras reservadas do java, como *class* ou *int*, como nome de variável. 
-
 * Existem também algumas convenções de nomenclatura: 
     * **Camel Case:** Para nomes compostos, a primeira palavra começa com minúscla e as demais começam com maiúscula (ex: **m**inha**I**dade).
     * **Constantes:** São declaradas com a palavra chave *final* e *static*. O nome deve ser todo em maiúsculas. 
