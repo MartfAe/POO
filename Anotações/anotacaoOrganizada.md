@@ -4,17 +4,32 @@
 # ☕ Minhas Anotações de POO - Java
 
 ## 📑 Sumário
-1. [Classe](#classe)
-2. [Objeto](#objeto)
-3. [Atributos](#atributos)
-4. [Métodos e Construtores](#métodos-e-construtores)
-5. [Pacotes e Maven](#pacotes-e-maven)
-6. [Visibilidade e Pacotes](#visibilidade-e-pacotes)
-7. [Encapsulamento](#encapsulamento)
-8. [Relacionamentos entre Classes](#relacionamentos-entre-classes)
-9. [Herança](#herança)
-10. [Polimorfismo](#polimorfismo)
+1. [Principios POO](#principios-poo)
+2. [Classe](#classe)
+3. [Objeto](#objeto)
+4. [Atributos](#atributos)
+5. [Métodos e Construtores](#métodos-e-construtores)
+6. [Pacotes e Maven](#pacotes-e-maven)
+7. [Visibilidade e Pacotes](#visibilidade-e-pacotes)
+8. [Encapsulamento](#encapsulamento)
+9. [Relacionamentos entre Classes](#relacionamentos-entre-classes)
+10. [Herança](#herança)
+11. [Polimorfismo](#polimorfismo)
 
+---
+
+## Principios POO
+### Encapsulamento: 
+* Protege os dados internos de um objeto, restringindo o acesso direto a eles e forçando o uso de *getters/setters*. 
+* Garante segurança e integridade. 
+* 
+
+### Herança: 
+* Permite que uma classe filha herde atríbutos e métodos de outra classe, a pai. 
+* Promove a reutilização do código e cria hierarquias. 
+
+### Polimorfismo: 
+* Permite que um objeto de classes diferentes sejam tratados de uma mesma forma. Onde o mesmo método seja tratado de formas diferentes dependendo o objeto que a utiliza. 
 ---
 
 ## Classe
@@ -153,6 +168,10 @@ p1.name = "Scooby";
 ## Encapsulamento
 * Oculta detalhes da implementação e protege os dados.
 * **Interface:** Lista de serviços fornecidos por um componente (o "contrato" da classe).
+* **Vantagens:**
+    * Tornar mudanças invisíveis.
+    * Facilitar a reutilização do código. 
+    * Reduzir efeitos colaterais 
 
 
 
