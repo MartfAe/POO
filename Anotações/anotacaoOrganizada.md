@@ -179,7 +179,89 @@ p1.name = "Scooby";
 
 ## Relacionamentos entre Classes
 * **Agregação:** O objeto "parte" pode existir sem o "todo".
-* **Composição:** O objeto "parte" é destruído se o "todo" for destruído (uso exclusivo).
+* **Composição:** O objeto "parte" é destruído se o "todo" for destruído.
+
+---
+
+### 🔗 Agregação
+* Relação **fraca** ("tem um").
+* A parte existe independentemente.
+
+#### 🧠 Exemplo:
+`Universidade` tem `Professor`.
+
+```java
+class Professor {
+    String nome;
+
+    public Professor(String nome) {
+        this.nome = nome;
+    }
+}
+
+class Universidade {
+    String nome;
+    Professor professor;
+
+    public Universidade(String nome, Professor professor) {
+        this.nome = nome;
+        this.professor = professor;
+    }
+}
+```
+
+```java
+Professor prof = new Professor("Carlos");
+Universidade uni = new Universidade("IFBA", prof);
+```
+
+✔ O professor continua existindo sem a universidade.
+
+---
+
+### 🧩 Composição
+* Relação **forte**.
+* A parte depende do todo.
+
+#### 🧠 Exemplo:
+`Casa` tem `Quarto`.
+
+```java
+class Quarto {
+    String tipo;
+
+    public Quarto(String tipo) {
+        this.tipo = tipo;
+    }
+}
+
+class Casa {
+    String endereco;
+    Quarto quarto;
+
+    public Casa(String endereco) {
+        this.endereco = endereco;
+        this.quarto = new Quarto("Suíte");
+    }
+}
+```
+
+```java
+Casa casa = new Casa("Rua A");
+```
+
+❌ O quarto não existe sem a casa.
+
+---
+
+### ⚖️ Diferença-chave
+
+| Característica | Agregação | Composição |
+|--------------|----------|------------|
+| Dependência | Fraca | Forte |
+| Ciclo de vida | Independente | Dependente |
+| Criação | Externa | Interna |
+| Exemplo | Professor/Universidade | Quarto/Casa |
 
 ---
 
