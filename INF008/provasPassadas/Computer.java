@@ -18,16 +18,16 @@ public class Computer {
         this(8,256);
     }
 
-    public void saveFile(int size){
+    public void saveFile(int size){ // Diminui o tamanho do ssd
         this.ssd-=size;
     }
 
-    public void moveFrom(Computer fonte, int size){
+    public void moveFrom(Computer fonte, int size){ // aumenta o tamanho do ssd fonte e diminui o tamanho do ssd que irá receber o arquivo
         fonte.ssd +=size; 
         this.saveFile(size);
     }
 
-    public void moveTo(Computer alvo, int size){
+    public void moveTo(Computer alvo, int size){ // Diminui o tamanho do ssd alvo, que recebe e aumenta o tamanho do que enviou, a mesma coisa de cima mas invertido
         alvo.moveFrom(this, size);
     }
 
@@ -41,10 +41,10 @@ public class Computer {
         Computer c2 = new Computer(16);
         Computer c3 = new Computer();
 
-        c1.saveFile(1);
-        c2.moveFrom(c1, 1);
+        c1.saveFile(1); // diminui o tamanho do ssd 1
+        c2.moveFrom(c1, 1); // Aumenta o tamanho de c1 e reduz o tamanho de c2
 
-        c2.moveTo(c1, 2);
+        c2.moveTo(c1, 2); // aumenta o tamanho de c2 e diminui o de c1
 
         c1.display();
 
