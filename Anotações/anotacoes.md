@@ -140,6 +140,9 @@
         * Não pode manipular atributos não estáticos.
         * Só podem invocar métodos estáticos, que se encontram na mesma classe. 
         * Acabam sendo ideais para métodos que não dependem do estado de um objeto, como o da classe *Math*. 
+        * Para serem implementados, precisa utilizar a palavra ***abstract***. 
+        * Muito utilizados em interfaces, obriga que as classes implementem esse comportamento. 
+        * Só podem existir dentro de classes abstratas ou interfaces. 
 
         ## **Métodos Não Estáticos:**
         * Podem invocar qualquer tipo de método (estático ou não estático).
@@ -171,6 +174,15 @@
 
 ## Interface: 
 * É uma lista de serviços fornecidos por um  componente. É o contato com o mundo exterior, que define o que pode ser feito com um objeto dessa classe. 
+* Obriga que um determinado grupo de classes tenha métodos em comum, porém esses métodos podem ser implementados em cada classe de forma diferente. 
+* Dentro de interfaces existem apenas assinaturas de métodos e propriedades. 
+* A classe que fará a implementação das assinaturas, definindo o comportamento dos métodos. 
+* Para chamar uma interface em uma determinada classe, é necessário utilizar a palavra ***implements*** ao final da assinatura da clase, exemplo: 
+```java
+public class nomeClasse implements nomeInterface; 
+```
+* Uma classe pode implementar várias interfaces ao mesmo tempo.
+
 
 # Relacionamentos entre classes/objetos:
 ## Agregação: 
